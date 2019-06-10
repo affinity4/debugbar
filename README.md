@@ -1,58 +1,20 @@
-# PHP Debug Bar
-
-[![Latest Stable Version](https://poser.pugx.org/maximebf/debugbar/v/stable.png)](https://packagist.org/packages/maximebf/debugbar) [![Total Downloads](https://poser.pugx.org/maximebf/debugbar/downloads.svg)](https://packagist.org/packages/maximebf/debugbar) [![License](https://poser.pugx.org/maximebf/debugbar/license.svg)](https://packagist.org/packages/maximebf/debugbar) [![Build Status](https://travis-ci.org/maximebf/php-debugbar.png?branch=master)](https://travis-ci.org/maximebf/php-debugbar)
+# Affinity4/DebugBar
 
 Displays a debug bar in the browser with information from php.
 No more `var_dump()` in your code!
 
-![Screenshot](https://raw.github.com/maximebf/php-debugbar/master/docs/screenshot.png)
+## Documentation
 
-**Features:**
+See [PHP DebugBar](http://phpdebugbar.com/docs) for full docs
 
- - Generic debug bar
- - Easy to integrate with any project
- - Clean, fast and easy to use interface
- - Handles AJAX request
- - Includes generic data collectors and collectors for well known libraries
- - The client side bar is 100% coded in javascript
- - Easily create your own collectors and their associated view in the bar
- - Save and re-open previous requests
- - [Very well documented](http://phpdebugbar.com/docs)
-
-Includes collectors for:
-
-  - [PDO](http://php.net/manual/en/book.pdo.php)
-  - [CacheCache](http://maximebf.github.io/CacheCache/)
-  - [Doctrine](http://doctrine-project.org)
-  - [Monolog](https://github.com/Seldaek/monolog)
-  - [Propel](http://propelorm.org/)
-  - [Slim](http://slimframework.com)
-  - [Swift Mailer](http://swiftmailer.org/)
-  - [Twig](http://twig.sensiolabs.org/)
-
-Checkout the [demo](https://github.com/maximebf/php-debugbar/tree/master/demo) for
-examples and [phpdebugbar.com](http://phpdebugbar.com) for a live example.
-
-Integrations with other frameworks:
-
-  - [Laravel](https://github.com/barryvdh/laravel-debugbar)
-  - [Atomik](http://atomikframework.com/docs/error-log-debug.html#debug-bar)
-  - [XOOPS](http://xoops.org/modules/news/article.php?storyid=6538)
-  - [Zend Framework 2](https://github.com/snapshotpl/ZfSnapPhpDebugBar)
-  - [Phalcon](https://github.com/snowair/phalcon-debugbar)
-  - [SilverStripe](https://github.com/lekoala/silverstripe-debugbar)
-  - [Grav CMS](https://getgrav.org)
-  - [TYPO3](https://github.com/Konafets/typo3_debugbar)
-  - Framework-agnostic middleware and PSR-7 with [php-middleware/phpdebugbar](https://github.com/php-middleware/phpdebugbar).
-
-*(drop me a message or submit a PR to add your DebugBar related project here)*
+Any changes to the standard API will be below.
 
 ## Installation
 
 The best way to install DebugBar is using [Composer](http://getcomposer.org)
 with the following command:
 
-```composer require maximebf/debugbar```
+```composer require affinity4/debugbar```
 
 ## Quick start
 
@@ -65,7 +27,7 @@ The easiest way is using the `render()` functions
 // Require the Composer autoloader, if not already loaded
 require 'vendor/autoload.php';
 
-use DebugBar\StandardDebugBar;
+use Affinity4\DebugBar\StandardDebugBar;
 
 $debugbar = new StandardDebugBar();
 $debugbarRenderer = $debugbar->getJavascriptRenderer();
